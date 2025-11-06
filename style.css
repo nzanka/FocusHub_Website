@@ -130,3 +130,40 @@ footer {
   margin-right: auto;
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
+
+/* 🔧 모바일 반응형 대응 */
+@media screen and (max-width: 768px) {
+  /* 메뉴 버튼들 세로 정렬 */
+  .nav-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .nav-buttons button,
+  .nav-buttons a {
+    width: 80%;
+    font-size: 1rem;
+  }
+
+  /* 정기권 표 스크롤 가능하게 */
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
+  }
+
+  th, td {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  /* 여백 정리 */
+  body {
+    padding: 0 8px;
+  }
+}
