@@ -1,171 +1,121 @@
-/* ===========================
-   FocusHub 다크 코지 테마 v2.1
-   =========================== */
 body {
-  font-family: 'Pretendard', sans-serif;
   margin: 0;
-  background: #2E3D35;      /* 어두운 카키톤 */
-  color: #E6D8B8;           /* 따뜻한 베이지 텍스트 */
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #2E3D35;
+  color: #E6D8B8;
   text-align: center;
   line-height: 1.6;
 }
 
-/* ===== 헤더 ===== */
-header {
-  background: #25332C;
+/* Hero Section */
+#hero {
+  position: relative;
+  background: url('images/cafe_main.jpg') center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   color: #E6D8B8;
-  padding: 1.5rem 0 1rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+  overflow: hidden;
 }
 
-/* FocusHub 로고 강조 효과 */
-header h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(230,216,184,0.5), 0 0 20px rgba(230,216,184,0.3);
-  animation: glowPulse 3s ease-in-out infinite;
+#hero .overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.55);
 }
 
-/* 모바일 네비게이션 */
-#menu-toggle {
-  display: none;
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.logo-circle {
+  width: 120px; height: 120px;
+  border: 2px solid #E6D8B8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  margin: 0 auto 20px;
+  box-shadow: 0 0 25px rgba(230,216,184,0.8);
+}
+
+.hero-buttons .btn {
   background: none;
-  border: none;
-  font-size: 1.6rem;
+  border: 1px solid #E6D8B8;
   color: #E6D8B8;
-}
-
-@media (max-width: 768px) {
-  nav .menu {
-    display: none;
-    flex-direction: column;
-    background-color: #2E3D35;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 10px;
-    border-radius: 8px;
-  }
-
-  #menu-toggle {
-    display: block;
-    cursor: pointer;
-  }
-
-  nav .menu.active {
-    display: flex;
-  }
-
-  nav a {
-    margin: 8px 0;
-    text-align: right;
-  }
-}
-
-@keyframes glowPulse {
-  0%,100% { text-shadow: 0 0 10px rgba(230,216,184,0.6), 0 0 20px rgba(230,216,184,0.3); }
-  50% { text-shadow: 0 0 20px rgba(230,216,184,0.9), 0 0 30px rgba(230,216,184,0.5); }
-}
-
-/* ===== 네비게이션 ===== */
-nav {
-  margin-top: 8px;
-}
-nav a {
-  color: #E6D8B8;
-  margin: 0 14px;
+  padding: 10px 18px;
+  border-radius: 8px;
+  margin: 5px;
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s, transform 0.2s;
-}
-nav a:hover {
-  color: #FFFFFF;
-  transform: scale(1.05);
+  font-weight: 500;
+  transition: 0.3s;
 }
 
-/* ===== 공통 섹션 ===== */
-section {
-  padding: 2rem 1rem;
-  max-width: 800px;
-  margin: auto;
-}
-
-/* ===== 버튼 ===== */
-.btn {
+.hero-buttons .btn:hover {
   background: #E6D8B8;
   color: #2E3D35;
-  border: none;
-  padding: 10px 20px;
-  font-weight: 600;
-  border-radius: 6px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-.btn:hover {
-  background: #FFF6D8;
-  transform: scale(1.08);
 }
 
-/* ===== 실시간 좌석 ===== */
-.status {
-  background: rgba(230,216,184,0.05);
-  border: 1px solid rgba(230,216,184,0.2);
-  border-radius: 10px;
-  margin-top: 30px;
-  padding: 1rem;
+.seat-status {
+  margin-top: 15px;
+  font-size: 0.9rem;
 }
 
-/* ===== 요금 안내 ===== */
-.price ul {
+/* Sections */
+.section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(230,216,184,0.3);
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+ul {
   list-style: none;
   padding: 0;
 }
-.price li {
-  margin: 8px 0;
+
+.price table {
+  margin: 20px auto;
+  width: 90%;
+  max-width: 600px;
+  border-collapse: collapse;
+  background: rgba(46,61,53,0.9);
+  border-radius: 12px;
 }
 
-/* ===== 지도 섹션 ===== */
-.map iframe {
-  border: none;
-  border-radius: 8px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+.price th, .price td {
+  padding: 12px;
+  border-bottom: 1px solid rgba(230,216,184,0.3);
 }
 
-/* ===== 푸터 ===== */
-footer {
-  background: #25332C;
-  color: #E6D8B8;
-  padding: 1.2rem 0;
-  font-size: 0.9rem;
-  margin-top: 3rem;
-}
-
-/* ===== 링크 색상 고정 (보라색 제거) ===== */
-a {
-  color: #E6D8B8;
-  text-decoration: none;
-}
-a:visited {
-  color: #E6D8B8;
-}
-a:hover {
-  color: #FFFFFF;
-}
-
-/* ===== 관리자 페이지 ===== */
-input[type="password"] {
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  margin: 10px;
-}
-#dashboard {
-  background: rgba(255,255,255,0.05);
-  padding: 20px;
-  border-radius: 10px;
+/* Brand Story */
+.brand-img {
+  width: 85%;
+  border-radius: 12px;
   margin-top: 20px;
-  border: 1px solid rgba(230,216,184,0.2);
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background: #2E3D35;
+  font-size: 0.9rem;
+  color: #C6B98B;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #hero { height: 80vh; background-position: center; }
+  h1 { font-size: 1.8rem; }
+  .logo-circle { width: 80px; height: 80px; font-size: 2rem; }
 }
