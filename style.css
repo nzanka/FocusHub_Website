@@ -127,6 +127,34 @@ body {
   margin: 0 auto;
 }
 
+
+/* ✅ 카카오 지도 퍼가기 - 하단 정보 가운데 정렬 */
+.hide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+  margin: 0 auto !important;
+  float: none !important;
+  text-align: center !important;
+}
+
+/* ✅ 내부 텍스트 중앙 정렬 */
+.hide strong,
+.hide div {
+  float: none !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+/* ✅ “지도 크게 보기” 링크도 가운데 정렬 */
+.hide a {
+  display: inline-block !important;
+  margin-left: 5px;
+  color: #000 !important;
+}
+
 h2 {
   border-bottom: 1px solid rgba(230,216,184,0.3);
   display: inline-block;
