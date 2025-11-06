@@ -1,20 +1,19 @@
-body {
-  font-family: 'Pretendard', sans-serif;
-  margin: 0;
-  background: #2E3D35;   /* ✅ 어두운 카키톤 */
-  color: #E6D8B8;        /* ✅ 따뜻한 베이지 글씨 */
-  text-align: center;
+a {
+  color: #E6D8B8;           /* 밝은 베이지 글씨 */
+  text-decoration: none;
 }
-header {
-  background: #25332C;   /* 상단 네비 진한 톤 */
-  color: #E6D8B8;
+
+a:hover {
+  color: #FFFFFF;           /* 마우스 올리면 흰색 */
+  text-decoration: underline;
 }
-.btn {
-  background: #E6D8B8;
-  color: #2E3D35;
-  border: none;
+
+nav a {
+  color: #E6D8B8;           /* 상단 메뉴 동일 색상 */
+  margin: 0 12px;
+  font-weight: 600;
 }
-footer {
-  background: #25332C;
-  color: #E6D8B8;
+
+nav a:hover {
+  color: #FFFFFF;
 }
