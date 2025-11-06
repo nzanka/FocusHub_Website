@@ -1,3 +1,6 @@
+/* ---------------------------------
+   Global Settings
+--------------------------------- */
 body {
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
@@ -7,7 +10,9 @@ body {
   line-height: 1.6;
 }
 
-/* Hero Section */
+/* ---------------------------------
+   Hero Section
+--------------------------------- */
 #hero {
   position: relative;
   background: url('images/cafe_main.jpg') center/cover no-repeat;
@@ -27,27 +32,6 @@ body {
   background: rgba(0,0,0,0.55);
 }
 
-
-/* 버튼 링크 색상 및 스타일 통일 */
-.nav-buttons a {
-  display: inline-block;
-  background-color: transparent;
-  color: #F5EBD0; /* 기존 텍스트 색과 어울리는 밝은 베이지톤 */
-  border: 1px solid #F5EBD0;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: all 0.3s ease;
-}
-
-/* 마우스 오버 효과 */
-.nav-buttons a:hover {
-  background-color: #F5EBD0;
-  color: #1A2C28; /* 어두운 배경과 대비되게 반전 */
-  transform: scale(1.05);
-}
-
 .hero-content {
   position: relative;
   z-index: 2;
@@ -65,21 +49,24 @@ body {
   box-shadow: 0 0 25px rgba(230,216,184,0.8);
 }
 
-.hero-buttons .btn {
-  background: none;
-  border: 1px solid #E6D8B8;
-  color: #E6D8B8;
-  padding: 10px 18px;
+/* 버튼 */
+.nav-buttons a {
+  display: inline-block;
+  background-color: transparent;
+  color: #F5EBD0;
+  border: 1px solid #F5EBD0;
+  padding: 10px 20px;
   border-radius: 8px;
-  margin: 5px;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  margin: 0 8px;
 }
 
-.hero-buttons .btn:hover {
-  background: #E6D8B8;
-  color: #2E3D35;
+.nav-buttons a:hover {
+  background-color: #F5EBD0;
+  color: #1A2C28;
+  transform: scale(1.05);
 }
 
 .seat-status {
@@ -87,10 +74,33 @@ body {
   font-size: 0.9rem;
 }
 
-/* 정기권 표 섹션 중앙 정렬 및 반응형 대응 */
+/* ---------------------------------
+   Section Common
+--------------------------------- */
+.section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  border-bottom: 1px solid rgba(230,216,184,0.3);
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ---------------------------------
+   정기권 안내 표
+--------------------------------- */
 .table-container {
   display: flex;
-  justify-content: center;  /* 가로 중앙 정렬 */
+  justify-content: center;
   margin: 0 auto;
   width: 100%;
   overflow-x: auto;
@@ -98,15 +108,15 @@ body {
 
 .table-container table {
   border-collapse: collapse;
-  width: 90%; /* 화면의 90% 폭만 사용 → 좌우 여백 확보 */
-  max-width: 800px; /* 너무 넓어지지 않게 제한 */
+  width: 90%;
+  max-width: 800px;
   text-align: center;
 }
 
 .table-container th,
 .table-container td {
   padding: 15px 20px;
-  color: #F5EBD0; /* 텍스트 색상 통일 */
+  color: #F5EBD0;
   font-size: 1.1rem;
   white-space: nowrap;
 }
@@ -120,88 +130,9 @@ body {
   border-top: 1px solid rgba(245, 235, 208, 0.2);
 }
 
-/* Sections */
-.section {
-  padding: 80px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-
-/* ✅ 카카오 지도 퍼가기 - 하단 정보 가운데 정렬 */
-.hide {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  width: 100% !important;
-  margin: 0 auto !important;
-  float: none !important;
-  text-align: center !important;
-}
-
-/* ✅ 내부 텍스트 중앙 정렬 */
-.hide strong,
-.hide div {
-  float: none !important;
-  display: inline-block !important;
-  vertical-align: middle !important;
-  text-align: center !important;
-}
-
-/* ✅ “지도 크게 보기” 링크도 가운데 정렬 */
-.hide a {
-  display: inline-block !important;
-  margin-left: 5px;
-  color: #000 !important;
-}
-
-h2 {
-  border-bottom: 1px solid rgba(230,216,184,0.3);
-  display: inline-block;
-  padding-bottom: 8px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.price table {
-  margin: 20px auto;
-  width: 90%;
-  max-width: 600px;
-  border-collapse: collapse;
-  background: rgba(46,61,53,0.9);
-  border-radius: 12px;
-}
-
-.price th, .price td {
-  padding: 12px;
-  border-bottom: 1px solid rgba(230,216,184,0.3);
-}
-
-/* Brand Story */
-.brand-img {
-  width: 85%;
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-/* Footer */
-footer {
-  padding: 20px;
-  background: #2E3D35;
-  font-size: 0.9rem;
-  color: #C6B98B;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  #hero { height: 80vh; background-position: center; }
-  h1 { font-size: 1.8rem; }
-  .logo-circle { width: 80px; height: 80px; font-size: 2rem; }
-}
-
+/* ---------------------------------
+   브랜드 스토리
+--------------------------------- */
 .brand-img {
   width: 85%;
   max-width: 700px;
@@ -213,56 +144,120 @@ footer {
   box-shadow: 0 0 20px rgba(0,0,0,0.4);
 }
 
-/* 🔧 모바일 반응형 대응 */
-@media screen and (max-width: 768px) {
-  /* 메뉴 버튼들 세로 정렬 */
+/* ---------------------------------
+   오시는 길 (카카오맵)
+--------------------------------- */
+.map-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* 지도 이미지 */
+.map-wrapper img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+}
+
+/* 지도 하단 정보 */
+.map-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  padding: 7px 11px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  border-radius: 4px;
+}
+
+.map-footer img {
+  vertical-align: middle;
+}
+
+.map-footer a {
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* ---------------------------------
+   Footer
+--------------------------------- */
+footer {
+  padding: 20px;
+  background: #2E3D35;
+  font-size: 0.9rem;
+  color: #C6B98B;
+}
+
+/* ---------------------------------
+   Responsive (모바일 대응)
+--------------------------------- */
+@media (max-width: 768px) {
+  #hero { height: 80vh; background-position: center; }
+  h1 { font-size: 1.8rem; }
+  .logo-circle { width: 80px; height: 80px; font-size: 2rem; }
+
   .nav-buttons {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    width: 100%;
   }
 
-  .nav-buttons button,
   .nav-buttons a {
     width: 80%;
     font-size: 1rem;
   }
 
-  /* 정기권 표 스크롤 가능하게 */
-  table {
+  .table-container table {
     width: 100%;
     display: block;
     overflow-x: auto;
-    white-space: nowrap;
-    border-collapse: collapse;
   }
 
   th, td {
     font-size: 0.9rem;
     padding: 10px;
   }
-
-  /* 여백 정리 */
-  body {
-    padding: 0 8px;
-  }
+}
+/* ✅ 지도 하단 버튼 스타일 개선 */
+.map-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background-color: transparent;
+  border: none;
 }
 
-<style>
-  /* 카카오맵 가운데 정렬 */
-  .root_daum_roughmap {
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-  }
+.map-footer a {
+  display: inline-block;
+  background-color: #E6D8B8;
+  color: #2E3D35;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
 
-  /* “kakaomap | 지도 크게 보기” 부분 중앙 정렬 */
-  .root_daum_roughmap .wrap_mapinfo {
-    text-align: center !important;
-    width: 100%;
-  }
-</style>
+.map-footer a:hover {
+  background-color: #d5c59f;
+  transform: scale(1.05);
+}
+
+/* 카카오 로고는 작게 */
+.map-footer img {
+  height: 16px;
+  opacity: 0.8;
+}
