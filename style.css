@@ -87,6 +87,39 @@ body {
   font-size: 0.9rem;
 }
 
+/* 정기권 표 섹션 중앙 정렬 및 반응형 대응 */
+.table-container {
+  display: flex;
+  justify-content: center;  /* 가로 중앙 정렬 */
+  margin: 0 auto;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table-container table {
+  border-collapse: collapse;
+  width: 90%; /* 화면의 90% 폭만 사용 → 좌우 여백 확보 */
+  max-width: 800px; /* 너무 넓어지지 않게 제한 */
+  text-align: center;
+}
+
+.table-container th,
+.table-container td {
+  padding: 15px 20px;
+  color: #F5EBD0; /* 텍스트 색상 통일 */
+  font-size: 1.1rem;
+  white-space: nowrap;
+}
+
+.table-container th {
+  font-weight: 700;
+  border-bottom: 1px solid rgba(245, 235, 208, 0.4);
+}
+
+.table-container tr + tr td {
+  border-top: 1px solid rgba(245, 235, 208, 0.2);
+}
+
 /* Sections */
 .section {
   padding: 80px 20px;
