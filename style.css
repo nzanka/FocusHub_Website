@@ -221,3 +221,20 @@ footer {
     padding: 0 8px;
   }
 }
+
+<style>
+  /* 카카오맵 가운데 정렬 */
+  .root_daum_roughmap {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  /* “kakaomap | 지도 크게 보기” 부분 중앙 정렬 */
+  .root_daum_roughmap .wrap_mapinfo {
+    text-align: center !important;
+    width: 100%;
+  }
+</style>
