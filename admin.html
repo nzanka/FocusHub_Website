@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>관리자 페이지 - FocusHub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>관리자 로그인</h2>
+  <input type="password" id="adminPass" placeholder="비밀번호 입력">
+  <button onclick="adminLogin()">로그인</button>
+
+  <div id="dashboard" style="display:none;">
+    <h2>FocusHub 운영 현황</h2>
+    <p>오늘 결제 건수: <span id="salesCount">0</span></p>
+    <p>오늘 매출 합계: <span id="salesTotal">0</span>원</p>
+    <p>좌석 이용률: <span id="seatRate">--</span>%</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
