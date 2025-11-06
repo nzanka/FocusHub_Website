@@ -27,6 +27,27 @@ body {
   background: rgba(0,0,0,0.55);
 }
 
+
+/* 버튼 링크 색상 및 스타일 통일 */
+.nav-buttons a {
+  display: inline-block;
+  background-color: transparent;
+  color: #F5EBD0; /* 기존 텍스트 색과 어울리는 밝은 베이지톤 */
+  border: 1px solid #F5EBD0;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+/* 마우스 오버 효과 */
+.nav-buttons a:hover {
+  background-color: #F5EBD0;
+  color: #1A2C28; /* 어두운 배경과 대비되게 반전 */
+  transform: scale(1.05);
+}
+
 .hero-content {
   position: relative;
   z-index: 2;
