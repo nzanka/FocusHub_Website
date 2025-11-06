@@ -119,3 +119,14 @@ footer {
   h1 { font-size: 1.8rem; }
   .logo-circle { width: 80px; height: 80px; font-size: 2rem; }
 }
+
+.brand-img {
+  width: 85%;
+  max-width: 700px;
+  border-radius: 12px;
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
