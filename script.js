@@ -30,3 +30,13 @@ function adminLogin() {
     alert("비밀번호가 틀렸습니다.");
   }
 }
+
+// 모바일 메뉴 열고 닫기 기능
+const menuToggle = document.getElementById('menu-toggle');
+const menu = document.getElementById('menu');
+
+if (menuToggle && menu) {
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+}
