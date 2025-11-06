@@ -1,121 +1,73 @@
-body {
-  margin: 0;
-  font-family: "Noto Sans KR", sans-serif;
-  background-color: #2E3D35;
-  color: #E6D8B8;
-  text-align: center;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusHub 카공라운지</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
-/* Hero Section */
-#hero {
-  position: relative;
-  background: url('images/cafe_main.jpg') center/cover no-repeat;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  color: #E6D8B8;
-  overflow: hidden;
-}
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <div class="logo-circle">I</div>
+      <h1>FocusHub 카공라운지</h1>
+      <p>당신의 집중이 머무는 곳</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn">이용안내 보기</a>
+        <a href="#price" class="btn">좌석 예약하기</a>
+        <a href="#brand" class="btn">브랜드 스토리</a>
+      </div>
+      <p class="seat-status">현재 이용 중 좌석: 46 / 60석</p>
+    </div>
+  </section>
 
-#hero .overlay {
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.55);
-}
+  <!-- 이용 안내 -->
+  <section id="about" class="section">
+    <h2>이용 안내</h2>
+    <p>FocusHub는 무인 카공라운지로, QR 체크인 후 자유롭게 이용 가능합니다.</p>
+    <ul>
+      <li>🕐 운영시간 : 24시간 무인운영</li>
+      <li>💳 결제방식 : 현장 QR 또는 카카오페이 예약</li>
+      <li>☕ 시설 : 콘센트 1인좌석, 프린터, 정수기, 냉난방 완비</li>
+      <li>📶 와이파이 및 무료 음료 제공</li>
+    </ul>
+  </section>
 
-.hero-content {
-  position: relative;
-  z-index: 2;
-}
+  <!-- 정기권 -->
+  <section id="price" class="section price">
+    <h2>정기권 구독 안내</h2>
+    <table>
+      <tr><th>구분</th><th>금액</th><th>혜택</th></tr>
+      <tr><td>주간권</td><td>29,000원</td><td>평일 무제한 이용</td></tr>
+      <tr><td>월간권</td><td>89,000원</td><td>24시간 자유입장</td></tr>
+      <tr><td>프리미엄</td><td>129,000원</td><td>우선 예약 + 음료 쿠폰</td></tr>
+    </table>
+  </section>
 
-.logo-circle {
-  width: 120px; height: 120px;
-  border: 2px solid #E6D8B8;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 3rem;
-  margin: 0 auto 20px;
-  box-shadow: 0 0 25px rgba(230,216,184,0.8);
-}
+  <!-- 브랜드 스토리 -->
+  <section id="brand" class="section">
+    <h2>브랜드 스토리</h2>
+    <p>
+      FocusHub는 단순한 공부 공간이 아닙니다.<br>
+      당신의 집중, 휴식, 성장 모두를 위한 개인 맞춤형 카공라운지입니다.<br>
+      모든 세대가 ‘몰입’을 경험할 수 있는 공간 — 그것이 우리의 목표입니다.
+    </p>
+    <img src="images/focushub_interior.jpg" alt="FocusHub 인테리어" class="brand-img">
+  </section>
 
-.hero-buttons .btn {
-  background: none;
-  border: 1px solid #E6D8B8;
-  color: #E6D8B8;
-  padding: 10px 18px;
-  border-radius: 8px;
-  margin: 5px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s;
-}
+  <!-- 오시는 길 -->
+  <section id="location" class="section">
+    <h2>오시는 길</h2>
+    <p>인천 남동구 구월동 341-14, 모래내시장역 5번 출구 도보 3분</p>
+    <iframe src="https://map.kakao.com/link/map/FocusHub,37.447,126.737" width="90%" height="300"></iframe>
+  </section>
 
-.hero-buttons .btn:hover {
-  background: #E6D8B8;
-  color: #2E3D35;
-}
+  <footer>
+    <p>© FocusHub | Designed by 이원석</p>
+  </footer>
 
-.seat-status {
-  margin-top: 15px;
-  font-size: 0.9rem;
-}
-
-/* Sections */
-.section {
-  padding: 80px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-h2 {
-  border-bottom: 1px solid rgba(230,216,184,0.3);
-  display: inline-block;
-  padding-bottom: 8px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.price table {
-  margin: 20px auto;
-  width: 90%;
-  max-width: 600px;
-  border-collapse: collapse;
-  background: rgba(46,61,53,0.9);
-  border-radius: 12px;
-}
-
-.price th, .price td {
-  padding: 12px;
-  border-bottom: 1px solid rgba(230,216,184,0.3);
-}
-
-/* Brand Story */
-.brand-img {
-  width: 85%;
-  border-radius: 12px;
-  margin-top: 20px;
-}
-
-/* Footer */
-footer {
-  padding: 20px;
-  background: #2E3D35;
-  font-size: 0.9rem;
-  color: #C6B98B;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  #hero { height: 80vh; background-position: center; }
-  h1 { font-size: 1.8rem; }
-  .logo-circle { width: 80px; height: 80px; font-size: 2rem; }
-}
+</body>
+</html>
