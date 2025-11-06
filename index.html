@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FocusHub 카공라운지</title>
+  <style>
+    body {margin:0;background:#2E3D35;color:#E6D8B8;font-family:Pretendard,sans-serif;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100vh;}
+    .logo{width:150px;height:150px;border:3px solid #E6D8B8;border-radius:50%;box-shadow:0 0 40px #E6D8B8;display:flex;align-items:center;justify-content:center;margin-bottom:30px;animation:glow 2.5s infinite ease-in-out;}
+    @keyframes glow{0%,100%{box-shadow:0 0 40px #E6D8B8;}50%{box-shadow:0 0 80px #E6D8B8;}}
+    a{border:1px solid #E6D8B8;border-radius:30px;padding:10px 20px;text-decoration:none;color:#E6D8B8;transition:.3s;margin:5px;}
+    a:hover{background:#E6D8B8;color:#2E3D35;}
+    .membership{margin-top:40px;width:85%;max-width:600px;border:1px solid #E6D8B8;border-radius:10px;background:rgba(255,255,255,.05);padding:20px;}
+    table{width:100%;border-collapse:collapse;}
+    th,td{border-bottom:1px solid #E6D8B8;padding:8px;}
+    footer{position:fixed;bottom:60px;font-size:.8rem;opacity:.7;}
+    .nav{position:fixed;bottom:0;left:0;width:100%;background:#25332C;color:#E6D8B8;display:flex;justify-content:space-around;padding:10px 0;}
+    .nav a{text-decoration:none;color:#E6D8B8;}
+  </style>
+</head>
+<body>
+  <div class="logo"><div style="width:8px;height:40px;background:#E6D8B8;border-radius:2px;"></div></div>
+  <h1>FocusHub 카공라운지</h1>
+  <h2>당신의 집중이 머무는 곳.</h2>
+
+  <div>
+    <a href="guide.html">이용안내</a>
+    <a href="reserve.html">좌석 예약</a>
+    <a href="brand.html">브랜드 스토리</a>
+  </div>
+
+  <div style="margin-top:40px;" id="seatStatus">💺 현재 이용 중 좌석: 37 / 60석</div>
+
+  <div class="membership">
+    <h3>💸 정기권 구독 안내</h3>
+    <table>
+      <tr><th>구분</th><th>금액</th><th>혜택</th></tr>
+      <tr><td>주간권</td><td>29,000원</td><td>평일 무제한 이용</td></tr>
+      <tr><td>월간권</td><td>89,000원</td><td>24시간 자유입장</td></tr>
+      <tr><td>프리미엄</td><td>129,000원</td><td>우선 예약 + 음료 쿠폰</td></tr>
+    </table>
+  </div>
+
+  <footer>© FocusHub | Designed by 이원석</footer>
+  <div class="nav">
+    <a href="index.html">🏠 Home</a>
+    <a href="guide.html">💳 이용안내</a>
+    <a href="reserve.html">💺 예약</a>
+    <a href="brand.html">💡 브랜드</a>
+  </div>
+
+  <script>
+    let used=37;const total=60;
+    setInterval(()=>{const r=Math.floor(Math.random()*3)-1;used=Math.min(Math.max(used+r,25),60);document.getElementById('seatStatus').innerText=`💺 현재 이용 중 좌석: ${used} / ${total}석`;},4000);
+  </script>
+</body>
+</html>
