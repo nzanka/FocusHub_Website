@@ -5,48 +5,78 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FocusHub 카공라운지</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
+
 <body>
   <header>
     <h1>FocusHub 카공라운지</h1>
     <nav>
-      <a href="index.html">홈</a>
-      <a href="guide.html">이용안내</a>
-      <a href="reserve.html">예약하기</a>
-      <a href="brand.html">브랜드스토리</a>
+      <a href="#about">이용안내</a>
+      <a href="#price">정기권</a>
+      <a href="#brand">브랜드스토리</a>
+      <a href="#location">오시는 길</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>당신의 집중이 머무는 곳</h2>
-    <p>인천 구월동 모래내시장역 5번 출구 도보 3분</p>
-    <a href="reserve.html" class="btn">좌석 예약하기</a>
+  <!-- Hero Section -->
+  <section id="hero" style="background:url('images/cafe_main.jpg') center/cover no-repeat; color:#E6D8B8; padding:120px 20px;">
+    <div style="background:rgba(46,61,53,0.7); padding:50px; border-radius:12px; display:inline-block;">
+      <h2 style="font-size:2rem; margin-bottom:10px;">당신의 집중이 머무는 곳</h2>
+      <p>인천 구월동 모래내시장역 5번 출구 도보 3분</p>
+      <a href="#price" class="btn">좌석 예약하기</a>
+    </div>
   </section>
 
-  <section class="status">
-    <h3>실시간 좌석 현황</h3>
-    <p>현재 남은 좌석: <span id="seatCount">--</span> / 60</p>
-  </section>
-
-  <section class="price">
-    <h3>이용 요금 안내</h3>
-    <ul>
-      <li>2시간 이용권 – 3,000원</li>
-      <li>1일 이용권 – 5,900원</li>
-      <li>주간 정기권 – 29,000원</li>
-      <li>월간 프리패스 – 89,000원</li>
+  <!-- 이용안내 Section -->
+  <section id="about">
+    <h2>이용 안내</h2>
+    <p>FocusHub는 무인 카공라운지로, QR 체크인 후 자유롭게 이용 가능합니다.</p>
+    <ul style="list-style:none; padding:0;">
+      <li>🕐 운영시간 : 24시간 무인운영</li>
+      <li>💳 결제방식 : 현장 QR 또는 카카오페이 예약</li>
+      <li>☕ 시설 : 콘센트 1인좌석, 프린터, 정수기, 냉난방 완비</li>
+      <li>📶 와이파이 및 무료 음료 제공</li>
     </ul>
   </section>
 
-  <section class="map">
-    <h3>찾아오시는 길</h3>
-    <iframe src="https://map.kakao.com/link/map/FocusHub,37.448292,126.709762" width="100%" height="300"></iframe>
+  <!-- 정기권 Section -->
+  <section id="price" class="price">
+    <h2>정기권 구독 안내</h2>
+    <table style="margin:auto; border-collapse:collapse; width:80%; max-width:600px;">
+      <tr style="border-bottom:1px solid rgba(230,216,184,0.4);">
+        <th>구분</th><th>금액</th><th>혜택</th>
+      </tr>
+      <tr><td>주간권</td><td>29,000원</td><td>평일 무제한 이용</td></tr>
+      <tr><td>월간권</td><td>89,000원</td><td>24시간 자유입장</td></tr>
+      <tr><td>프리미엄</td><td>129,000원</td><td>우선 예약 + 음료 쿠폰</td></tr>
+    </table>
+  </section>
+
+  <!-- 브랜드 스토리 Section -->
+  <section id="brand">
+    <h2>브랜드 스토리</h2>
+    <p>
+      FocusHub는 단순한 공부 공간이 아닙니다.<br>
+      당신의 집중, 휴식, 성장 모두를 위한 개인 맞춤형 카공라운지입니다.<br>
+      모든 세대가 ‘몰입’을 경험할 수 있는 공간 — 그것이 우리의 목표입니다.
+    </p>
+    <img src="images/focushub_interior.jpg" alt="FocusHub 인테리어" style="width:80%; border-radius:10px; margin-top:20px;">
+  </section>
+
+  <!-- 오시는 길 Section -->
+  <section id="location" class="map">
+    <h2>오시는 길</h2>
+    <p>인천 남동구 구월동 341-14, 모래내시장역 5번 출구 도보 3분</p>
+    <iframe src="https://map.kakao.com/link/map/FocusHub,37.447,126.737" width="90%" height="300"></iframe>
   </section>
 
   <footer>
-    <p>© 2025 FocusHub | 인천광역시 남동구 구월동 341-14 B1 | 문의: 010-0000-0000</p>
+    <p>© FocusHub | Designed by 이원석</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
